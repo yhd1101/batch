@@ -1,0 +1,32 @@
+package com.example.batch.product;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Getter
+@NoArgsConstructor
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private Integer price;
+    private String status;
+
+    public Product(String name, Integer price, String status) {
+        this.name = name;
+        this.price = price;
+        this.status = status;
+    }
+
+    public void changeStatus(String status) {
+        this.status = status;
+    }
+}
