@@ -43,6 +43,7 @@ public class BatchConfig {
                     List<Product> products = productRepository.findAll();
 
                     ObjectMapper objectMapper = new ObjectMapper();
+                    //ddd
                     Path outputPath = Path.of("output", "processed-products.jsonl");
                     Files.createDirectories(outputPath.getParent());
 
