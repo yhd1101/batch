@@ -71,7 +71,6 @@ public class BatchConfig {
 
                     productRepository.saveAll(products);
 
-                    log.info("전체 데이터 수 = {}", products.size());
                     log.info("상태 변경 수 = {}", changedCount);
 
                     return RepeatStatus.FINISHED;
